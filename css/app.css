@@ -216,21 +216,20 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 .about-cards {
-  --columns: 3;
+  --columns: 4;
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: 20px;
 }
 .about-card {
-  padding: 30px;
+  padding: 20px;
   border: 1px solid #eee;
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.25s linear;
 }
 .about-card img {
-  width: 100px;
-  height: 100px;
+  height: 80px;
   object-fit: cover;
   margin: 0 auto;
 }
@@ -246,6 +245,11 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1023px) {
+  .about-cards {
+    --columns: 3;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-cards {
     --columns: 1;

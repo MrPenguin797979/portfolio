@@ -4,21 +4,20 @@
     text-align: center;
   }
   &-cards {
-    --columns: 3;
+    --columns: 4;
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-gap: 20px;
   }
   &-card {
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #eee;
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.25s linear;
   }
   &-card img {
-    width: 100px;
-    height: 100px;
+    height: 80px;
     object-fit: cover;
     margin: 0 auto;
   }
@@ -28,6 +27,12 @@
   }
   &-team {
     @include textGradient;
+  }
+}
+
+@include maxWidth(1023px) {
+  .about-cards {
+    --columns: 3;
   }
 }
 
