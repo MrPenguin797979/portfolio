@@ -1,0 +1,38 @@
+.about {
+  padding-top: 50px;
+  &-title {
+    text-align: center;
+  }
+  &-cards {
+    --columns: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: 20px;
+  }
+  &-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.25s linear;
+  }
+  &-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  &-card:hover {
+    border: 1px solid #999;
+    opacity: 1;
+  }
+  &-team {
+    @include textGradient;
+  }
+}
+
+@include maxWidth(767px) {
+  .about-cards {
+    --columns: 1;
+  }
+}
