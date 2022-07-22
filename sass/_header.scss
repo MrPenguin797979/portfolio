@@ -75,15 +75,10 @@
     &-menu {
       flex-direction: column;
       justify-content: center;
-      align-items: flex-end;
-      gap: 20px 0;
+      align-items: flex-start;
       position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-right: 50px;
-      background-color: #ff6651;
+      inset: 0;
+      background-color: var(--bg-color);
       z-index: 9998;
       transform: translateX(100%);
       transition: transform 0.25s linear;
@@ -91,5 +86,12 @@
         transform: translateX(0);
       }
     }
+  }
+
+  .menu-item a {
+    display: block;
+    width: 100vw;
+    padding: 20px;
+    border-bottom: 1px solid white;
   }
 }
