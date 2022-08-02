@@ -55,6 +55,15 @@
   }
 }
 
+.line-effect {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-image: var(--gradient);
+  transition: all 0.25s linear;
+  pointer-events: none;
+}
+
 @include maxWidth(767px) {
   .header-content {
     flex-direction: column-reverse;

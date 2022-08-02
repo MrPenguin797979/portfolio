@@ -105,6 +105,7 @@ body::-webkit-scrollbar-thumb {
 .title {
   font-size: 35px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .heading span {
@@ -174,6 +175,15 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.line-effect {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-image: var(--gradient);
+  transition: all 0.25s linear;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 767px) {
   .header-content {
     flex-direction: column-reverse;
@@ -213,54 +223,45 @@ body::-webkit-scrollbar-thumb {
 .about {
   padding-top: 50px;
 }
-.about-title {
-  text-align: center;
+
+.skill {
+  padding-top: 40px;
 }
-.about-cards {
+.skill-cards {
   --columns: 4;
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-gap: 20px;
 }
-.about-card {
+@media screen and (max-width: 1023px) {
+  .skill-cards {
+    --columns: 3;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skill-cards {
+    --columns: 1;
+  }
+}
+.skill-card {
   padding: 20px;
   border: 1px solid #eee;
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.25s linear;
 }
-.about-card img {
+.skill-card img {
   height: 80px;
   object-fit: cover;
   margin: 0 auto;
 }
-.about-card:hover {
+.skill-card:hover {
   border: 1px solid #999;
   opacity: 1;
 }
-.about-team {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: var(--gradient);
-  font-weight: 600;
-}
 
-@media screen and (max-width: 1023px) {
-  .about-cards {
-    --columns: 3;
-  }
-}
-@media screen and (max-width: 767px) {
-  .about-cards {
-    --columns: 1;
-  }
-}
 .contact {
   padding-top: 50px;
-}
-.contact-title {
-  text-align: center;
 }
 .contact-list {
   display: flex;
